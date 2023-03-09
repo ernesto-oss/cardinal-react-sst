@@ -14,9 +14,11 @@
     "build": "turbo build",
     "dev": "turbo dev --parallel",
     "lint": "turbo lint",
+    "sst-dev": "sst dev",
     "format": "prettier --write \"**/*.{js,mjs,cjs,jsx,ts,tsx,md}\""
   },
   "devDependencies": {
+    "sst": "^2.1.21",
     "@types/node": "latest",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
@@ -25,6 +27,5 @@
     "prettier-plugin-tailwindcss": "^0.2.4",
     "rimraf": "latest",
     "turbo": "latest"
-  },
-  "packageManager": "pnpm@7.13.6"
+  }
 }
