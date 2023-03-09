@@ -9,16 +9,16 @@ import type { Session } from "@acme/auth";
 import type PrismaTypes from "@pothos/plugin-prisma/generated";
 import type { NextApiRequest, NextApiResponse } from "next";
 
-const isDevelopment = process.env.NODE_ENV === "development";
+// const isDevelopment = process.env.NODE_ENV === "development";
 
 /**
  * We check for the NODE_ENV to allow re-registration of plugins in development mode. This is used to
  * bypass Next.js behavior that triggers the error `Received multiple implementations for plugin {pluginName}`
  * @see: https://github.com/hayes/pothos/issues/696
  * */
-if (isDevelopment) {
-  SchemaBuilder.allowPluginReRegistration = true;
-}
+// if (isDevelopment) {
+//   SchemaBuilder.allowPluginReRegistration = true;
+// }
 
 /**
  * The builder is used to register all plugins and custom scalars. It is also used to register all schema
@@ -73,5 +73,4 @@ builder.queryType();
  * Register the custom scalars. The scalars registered here can be used to define fields on the schema entities.
  * @see: https://pothos-graphql.dev/docs/guide/scalars#scalars
  * */
-builder.addScalarType("DateTime", DateTimeResolver, {});
-// builder.addScalarType("Json", JSONResolver, {});
+// builder.addScalarType("DateTime", DateTimeResolver, {});
