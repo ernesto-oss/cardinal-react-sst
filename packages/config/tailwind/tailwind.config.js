@@ -8,9 +8,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        "eletric-pink": "#F42A8B",
-      },
     },
   },
   plugins: [],
